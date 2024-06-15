@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mu Titans: Conquiste Seu Legado</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('fundo.jpg'); /* Certifique-se de que esta imagem esteja acessível */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(50, 0, 0, 0.95); /* Fundo vermelho escuro com 95% de opacidade */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(50, 0, 0, 0.5); /* Sombra vermelha */
+        }
+        h1 {
+            color: #ff3333; /* Título vermelho claro */
+            margin-top: 0; /* Remover a margem superior para aproximar do logotipo */
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 10px; /* Reduzir a margem inferior para aproximar do título */
+        }
+        .loading {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff3333; /* Texto de carregamento vermelho claro */
+        }
+        .chaos-machine {
+            margin-top: 20px;
+            border: 2px solid #ff3333; /* Borda vermelha clara */
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .spinner {
+            margin: auto;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid #ff3333; /* Spinner vermelho claro */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            position: relative;
+        }
+        .spinner::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 76px;
+            height: 76px;
+            border: 8px solid #ff3333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite reverse;
+        }
+        .goblin {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            animation: move 2s infinite alternate;
+        }
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo1.png" alt="MuOnline Logo" class="logo">
+        <h1>Carregando...</h1>
+        <p>Estamos protegendo seu acesso para garantir uma experiência segura e divertida no MuOnline.</p>
+        <div class="chaos-machine">
+            <h2>Chaos Machine em Ação...</h2>
+            <div class="spinner"></div>
+            <p>Doendes estão preparando a combinação na Chaos Machine... Por favor, aguarde.</p>
+            <div class="goblin" style="background-image: url('goblin.png'); left: 10%; top: 20%;"></div>
+            <div class="goblin" style="background-image: url('goblin2.png'); left: 50%; top: 60%; animation-delay: 1s;"></div>
+        </div>
+        <p>Obrigado pela sua paciência! Seu acesso será restaurado em breve.</p>
+        <div class="captcha-box">
+            ::CAPTCHA_BOX::
+        </div>
+    </div>
+</body>
+</html>
